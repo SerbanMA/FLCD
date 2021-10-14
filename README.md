@@ -1,6 +1,6 @@
 # Laboratory 2 - Symbol Table -
 
-    I have implemented the symbol table using a alphabetically binary search tree [BST] in Java.
+    I have implemented the symbol table using an alphabetically binary search tree [BST] in Java.
 
 # * Functions *
 
@@ -9,7 +9,7 @@
         - return the key of the node with the given value if the value is already in the BST.
 
     getKey:
-        - returns the key of the node with the given value, going trough the BST values.
+        - returns the key of the node with the given value, going through the BST values.
 
     getNewNode:
         - returns a new node with the given value (generates a new key value for a new node).
