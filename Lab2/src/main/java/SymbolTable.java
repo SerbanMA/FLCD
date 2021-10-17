@@ -71,15 +71,13 @@ public class SymbolTable {
 
     public static void main(String[] args) {
         SymbolTable symbolTable = new SymbolTable();
-        System.out.println("hi");
 
         symbolTable.add("ana");
         symbolTable.add("are");
-        symbolTable.add("mere");
         symbolTable.add("pere");
-        symbolTable.add("prune");
+        symbolTable.add("mere");
         symbolTable.add("banane");
-
+        symbolTable.add("ana");
 
         symbolTable.inorder(symbolTable.root);
     }
