@@ -25,5 +25,5 @@ c. Constants
 	3. character - rule:
 		character = letter|digit
 
-	4.string - rule
+	4. string - rule
 		string = character{string}
