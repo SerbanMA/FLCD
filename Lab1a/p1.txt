@@ -1,0 +1,17 @@
+# max of 3 numbers
+
+var integer a
+var integer b
+var integer c
+
+read[a]
+read[b]
+read[c]
+
+if[a > b]
+	write[a]
+else
+	if[c > b]
+		write[c]
+	else
+		write[b]

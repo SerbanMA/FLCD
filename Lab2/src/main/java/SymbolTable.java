@@ -64,7 +64,7 @@ public class SymbolTable {
     {
         if (root != null) {
             inorder(root.getLeftNode());
-            System.out.println(root.getValue());
+            System.out.println(root.getKey() + " " + root.getValue());
             inorder(root.getRightNode());
         }
     }
@@ -72,12 +72,13 @@ public class SymbolTable {
     public static void main(String[] args) {
         SymbolTable symbolTable = new SymbolTable();
 
+        symbolTable.add("Ana");
+        symbolTable.add("has");
+        symbolTable.add("pear");
+        symbolTable.add("apple");
+        symbolTable.add("banana");
         symbolTable.add("ana");
-        symbolTable.add("are");
-        symbolTable.add("pere");
-        symbolTable.add("mere");
-        symbolTable.add("banane");
-        symbolTable.add("ana");
+        symbolTable.add("apple");
 
         symbolTable.inorder(symbolTable.root);
     }

@@ -1,0 +1,19 @@
+__start__
+
+var integer __a
+var integer 1b
+var integer .c
+
+read[a]
+read[b]
+read[c]
+
+if[a ~ b]
+	write[a]
+if[a ` b]
+	if[c > b]
+		write[c]
+	if[c <= b]
+		write[b]
+
+__end__
