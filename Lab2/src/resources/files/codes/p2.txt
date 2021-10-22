@@ -1,0 +1,15 @@
+#gcd of 2 numbers
+
+var integer a
+var integer b
+var integer r
+
+read[a]
+read[b]
+
+while[b]
+	r = a % b
+	a = b
+	b = r
+
+write[a]

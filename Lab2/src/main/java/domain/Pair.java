@@ -4,12 +4,12 @@ public class Pair {
     private final String key;
     private final Integer value;
 
-    public Pair () {
+    public Pair() {
         this.key = "";
         this.value = -1;
     }
 
-    public Pair (String key, Integer value) {
+    public Pair(String key, Integer value) {
         this.key = key;
         this.value = value;
     }

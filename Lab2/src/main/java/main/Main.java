@@ -1,15 +1,20 @@
 package main.java.main;
 
-import main.java.Scanner;
+import main.java.MyScanner;
 
 import java.io.File;
 
 public class Main {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner();
 
-        scanner.scan(new File(""));
+        String filename = "p1.txt";
+        File file = new File("src/resources/files/codes/" + filename);
+
+        MyScanner myScanner = new MyScanner();
+
+        myScanner.scan(file);
+        myScanner.print();
 
     }
 }

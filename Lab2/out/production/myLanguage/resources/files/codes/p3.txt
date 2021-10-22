@@ -1,0 +1,15 @@
+# sum of n numbers
+
+var integer n
+var integer x
+var integer s
+var integer i
+
+read[n]
+s = 0
+
+for[i = 0;i < n;i = i + 1]
+	read[x]
+	s = s + x
+
+write[s]
