@@ -3,9 +3,11 @@ package main.java.helper;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
-public class DataHelper {
+public abstract class DataHelper {
 
     private final ArrayList<String> separators = new ArrayList<>();
     private final ArrayList<String> operators = new ArrayList<>();
@@ -15,11 +17,24 @@ public class DataHelper {
         readSeparators();
         readOperators();
         readReservedWords();
-        System.out.println(reservedWords);
     }
 
     public ArrayList<String> getSeparators() {
         return separators;
+    }
+
+    public ArrayList<String> getSeparatorsWithSpecial() {
+        ArrayList<String> result = new ArrayList<>();
+
+        for (String separator : separators) {
+
+            if (isSpecial(separator)) {
+                result.add("\\" + separator);
+            } else {
+                result.add(separator);
+            }
+        }
+        return result;
     }
 
     public ArrayList<String> getOperators() {
@@ -73,5 +88,9 @@ public class DataHelper {
         } catch (FileNotFoundException exception) {
             System.out.println(exception.getMessage());
         }
+    }
+
+    private boolean isSpecial(String value) {
+        return List.of("[","]","{","}").contains(value);
     }
 }

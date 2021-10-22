@@ -6,32 +6,14 @@ import java.util.*;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
-public class ParseHelper {
+public class ParseHelper extends DataHelper{
 
-    private final DataHelper dataHelper = new DataHelper();
-
-    private final String separatorsRegex = String.join("|", dataHelper.getSeparators());
-    private final String operatorsRegex = String.join("|", dataHelper.getOperators());
+    private final String separatorsRegex = String.join("|", getSeparatorsWithSpecial());
+    private final String operatorsRegex = String.join("|", getOperators());
 
     public ParseHelper() {}
 
-    public ArrayList<String> parse(File file) {
-        ArrayList<String> tokens = new ArrayList<>();
-
-        try {
-            Scanner myReader = new Scanner(file);
-
-            while (myReader.hasNextLine())
-                tokens.addAll(parseLine(myReader.nextLine()));
-
-        } catch (FileNotFoundException exception) {
-            System.out.println(exception.getMessage());
-        }
-
-        return tokens;
-    }
-
-    private ArrayList<String> parseLine(String value) {
+    public ArrayList<String> parseLine(String value) {
         return splitWithSeparators(String.join(" ", splitWithOperators(value)));
     }
 
@@ -42,12 +24,12 @@ public class ParseHelper {
     }
 
     private ArrayList<String> splitWithSeparators(String value) {
-        List<String> stringList = Pattern.compile(separatorsRegex.toString())
+        List<String> stringList = Pattern.compile("(?<=(" + separatorsRegex + "))|(?=(" + separatorsRegex + "))")
                 .splitAsStream(value)
                 .collect(Collectors.toList());
 
         return stringList.stream().
-                filter(element -> !element.isEmpty())
+                filter(element -> !element.isBlank())
                 .collect(Collectors.toCollection(ArrayList::new));
     }
 }

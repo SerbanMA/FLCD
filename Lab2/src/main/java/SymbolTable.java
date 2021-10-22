@@ -1,6 +1,9 @@
 package main.java;
 
 import main.java.domain.Node;
+
+import java.util.Stack;
+
 public class SymbolTable {
 
     private Integer key = 0;
@@ -60,26 +63,36 @@ public class SymbolTable {
         return new Node(key, value);
     }
 
-    void inorder(Node root)
-    {
-        if (root != null) {
-            inorder(root.getLeftNode());
-            System.out.println(root.getKey() + " " + root.getValue());
-            inorder(root.getRightNode());
+    @Override
+    public String toString() {
+        StringBuilder string = new StringBuilder();
+
+        if (root == null)
+            return "This is empty";
+
+        Stack<Node> stack = new Stack<>();
+        Node current = root;
+
+        while (current != null || stack.size() > 0)
+        {
+            while (current !=  null)
+            {
+                stack.push(current);
+                current = current.getLeftNode();
+            }
+
+            current = stack.pop();
+
+            string.append("(")
+                    .append(current.getKey())
+                    .append(",")
+                    .append(current.getValue())
+                    .append(")")
+                    .append(" ");
+
+            current = current.getRightNode();
         }
-    }
 
-    public static void main(String[] args) {
-        SymbolTable symbolTable = new SymbolTable();
-
-        symbolTable.add("Ana");
-        symbolTable.add("has");
-        symbolTable.add("pear");
-        symbolTable.add("apple");
-        symbolTable.add("banana");
-        symbolTable.add("ana");
-        symbolTable.add("apple");
-
-        symbolTable.inorder(symbolTable.root);
+        return string.toString();
     }
 }

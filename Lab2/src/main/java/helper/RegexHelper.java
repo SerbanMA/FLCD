@@ -4,6 +4,18 @@ public class RegexHelper {
 
     public RegexHelper() {}
 
+    public boolean isIdentifier(String value) {
+        return value.matches("^_?[a-zA-Z][a-zA-Z0-9]*$");
+    }
+
+    public boolean isConstant(String value) {
+        return isBoolean(value) ||
+                isInteger(value) ||
+                isInteger(value) ||
+                isCharacter(value) ||
+                isString(value);
+    }
+
     public boolean isBoolean(String value) {
         return value.matches("^[01]$");
     }
@@ -15,12 +27,8 @@ public class RegexHelper {
     public boolean isCharacter(String value) {
         return value.matches("^'[a-zA-Z0-9 ]'$");
     }
-    
+
     public boolean isString(String value) {
         return value.matches("^\"[a-zA-Z0-9 ]*\"$");
-    }
-
-    public boolean isIdentifier(String value) {
-        return value.matches("^_?[a-zA-Z][a-zA-Z0-9]*$");
     }
 }
