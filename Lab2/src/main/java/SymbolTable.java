@@ -81,12 +81,12 @@ public class SymbolTable {
 
             current = stack.pop();
 
-            string.append("(")
+            string.append("(key: ")
                     .append(current.getKey())
-                    .append(",")
+                    .append(", value: ")
                     .append(current.getValue())
                     .append(")")
-                    .append(" ");
+                    .append("\n");
 
             current = current.getRightNode();
         }

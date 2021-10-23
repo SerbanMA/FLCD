@@ -1,4 +1,6 @@
-package main.java.helper;
+package main.java.helper.iostream;
+
+import main.java.helper.constants.Constant;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -11,8 +13,8 @@ public class ReaderHelper {
         ArrayList<String> separators = new ArrayList<>();
 
         try {
-            File myObj = new File(Constant.input + "separators.ini");
-            Scanner myReader = new Scanner(myObj);
+            File file = new File(Constant.input + "separators.ini");
+            Scanner myReader = new Scanner(file);
 
             while (myReader.hasNextLine()) {
                 String separator = myReader.nextLine();
@@ -30,8 +32,8 @@ public class ReaderHelper {
         ArrayList<String> operators = new ArrayList<>();
 
         try {
-            File myObj = new File(Constant.input + "operators.ini");
-            Scanner myReader = new Scanner(myObj);
+            File file = new File(Constant.input + "operators.ini");
+            Scanner myReader = new Scanner(file);
 
             while (myReader.hasNextLine()) {
                 String operator = myReader.nextLine();
@@ -49,8 +51,8 @@ public class ReaderHelper {
         ArrayList<String> reservedWords = new ArrayList<>();
 
         try {
-            File myObj = new File(Constant.input + "res_words.ini");
-            Scanner myReader = new Scanner(myObj);
+            File file = new File(Constant.input + "res_words.ini");
+            Scanner myReader = new Scanner(file);
 
             while (myReader.hasNextLine()) {
                 String operator = myReader.nextLine();

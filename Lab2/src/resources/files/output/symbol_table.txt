@@ -1,0 +1,10 @@
+Identifier Table
+- as Binary Search Tree -
+(key: 1, value: a)
+(key: 2, value: b)
+(key: 3, value: c)
+
+
+Constants Table
+- as Binary Search Tree -
+This is empty

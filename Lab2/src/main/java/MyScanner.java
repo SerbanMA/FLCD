@@ -2,9 +2,10 @@ package main.java;
 
 import main.java.domain.Pair;
 import main.java.helper.*;
+import main.java.helper.constants.Colour;
+import main.java.helper.iostream.WriterHelper;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -38,10 +39,10 @@ public class MyScanner {
                         pifList.add(new Pair(token, 0));
                     } else if (regexHelper.isIdentifier(token)) {
                         Integer index = identifiersTable.add(token);
-                        pifList.add(new Pair(token, index));
+                        pifList.add(new Pair("id", index));
                     } else if (regexHelper.isConstant(token)) {
                         Integer index = constantsTable.add(token);
-                        pifList.add(new Pair(token, index));
+                        pifList.add(new Pair("ct", index));
                     } else {
                         messageError.append("Error occurred on line ")
                                 .append(line)
@@ -54,21 +55,12 @@ public class MyScanner {
             if (!messageError.isEmpty())
                 throw new Exception(messageError.toString());
 
-            printST();
-            printPIF();
+            WriterHelper.writeST(identifiersTable, constantsTable);
+            WriterHelper.writePIF(pifList);
 
         } catch (Exception exception) {
-            System.out.println(ColourHelper.RED + exception.getMessage().strip() + ColourHelper.RESET);
+            System.out.println(Colour.RED + exception.getMessage().strip() + Colour.RESET);
         }
-    }
-
-    public void printST() {
-        System.out.println(identifiersTable);
-        System.out.println(constantsTable);
-    }
-
-    public void printPIF() {
-        System.out.println(pifList);
     }
 
     private void set() {

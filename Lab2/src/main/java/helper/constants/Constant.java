@@ -1,4 +1,4 @@
-package main.java.helper;
+package main.java.helper.constants;
 
 public class Constant {
 
