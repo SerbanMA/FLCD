@@ -1,8 +1,9 @@
 package main.java.helper;
 
-public class TypeHelper extends DataHelper{
+public class TypeHelper extends DataHelper {
 
-    public TypeHelper() {}
+    public TypeHelper() {
+    }
 
     public boolean isOperator(String value) {
         return getOperators().contains(value);

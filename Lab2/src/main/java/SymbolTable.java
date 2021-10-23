@@ -9,10 +9,10 @@ public class SymbolTable {
     private Integer key = 0;
     private Node root = null;
 
-    public SymbolTable() {}
+    public SymbolTable() {
+    }
 
-    public Integer add(String value)
-    {
+    public Integer add(String value) {
         Node newNode = getNewNode(value);
         Node currentNode = root;
         Node lateNode = null;
@@ -46,7 +46,7 @@ public class SymbolTable {
         while (node != null) {
 
             if (value.equals(node.getValue()))
-                 return node.getKey();
+                return node.getKey();
 
             else if (value.compareTo(node.getValue()) < 0)
                 node = node.getLeftNode();
@@ -73,10 +73,8 @@ public class SymbolTable {
         Stack<Node> stack = new Stack<>();
         Node current = root;
 
-        while (current != null || stack.size() > 0)
-        {
-            while (current !=  null)
-            {
+        while (current != null || stack.size() > 0) {
+            while (current != null) {
                 stack.push(current);
                 current = current.getLeftNode();
             }

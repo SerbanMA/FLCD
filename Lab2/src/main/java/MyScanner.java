@@ -13,7 +13,7 @@ public class MyScanner {
     private SymbolTable identifiersTable;
     private SymbolTable constantsTable;
     private ArrayList<Pair> pifList;
-    private StringBuilder messageError = new StringBuilder();
+    private final StringBuilder messageError = new StringBuilder();
 
     private final ParseHelper parseHelper = new ParseHelper();
     private final RegexHelper regexHelper = new RegexHelper();
@@ -36,16 +36,13 @@ public class MyScanner {
                 for (String token : tokens) {
                     if (typeHelper.isSeparator(token) || typeHelper.isOperator(token) || typeHelper.isReservedWord(token)) {
                         pifList.add(new Pair(token, 0));
-                    }
-                    else if (regexHelper.isIdentifier(token)) {
+                    } else if (regexHelper.isIdentifier(token)) {
                         Integer index = identifiersTable.add(token);
                         pifList.add(new Pair(token, index));
-                    }
-                    else if (regexHelper.isConstant(token)) {
+                    } else if (regexHelper.isConstant(token)) {
                         Integer index = constantsTable.add(token);
                         pifList.add(new Pair(token, index));
-                    }
-                    else {
+                    } else {
                         messageError.append("Error occurred on line ")
                                 .append(line)
                                 .append(" for token ")

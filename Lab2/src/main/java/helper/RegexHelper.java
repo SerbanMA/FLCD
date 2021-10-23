@@ -2,7 +2,8 @@ package main.java.helper;
 
 public class RegexHelper {
 
-    public RegexHelper() {}
+    public RegexHelper() {
+    }
 
     public boolean isIdentifier(String value) {
         return value.matches("^_?[a-zA-Z][a-zA-Z0-9]*$");
