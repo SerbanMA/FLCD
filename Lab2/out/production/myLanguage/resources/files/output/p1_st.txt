@@ -1,4 +1,4 @@
-Identifier Table
+Identifiers Table
 - as Binary Search Tree -
 (key: 1, value: a)
 (key: 2, value: b)

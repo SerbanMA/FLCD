@@ -55,11 +55,12 @@ public class MyScanner {
             if (!messageError.isEmpty())
                 throw new Exception(messageError.toString());
 
-            WriterHelper.writeST(identifiersTable, constantsTable);
-            WriterHelper.writePIF(pifList);
+            WriterHelper.writeST(file.getName(), identifiersTable, constantsTable);
+            WriterHelper.writePIF(file.getName(), pifList);
 
         } catch (Exception exception) {
             System.out.println(Colour.RED + exception.getMessage().strip() + Colour.RESET);
+            WriterHelper.writeError(file.getName(), exception.getMessage().strip());
         }
     }
 

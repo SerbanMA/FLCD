@@ -1,0 +1,6 @@
+Error occurred on line 1 for token __a
+Error occurred on line 2 for token 1b
+Error occurred on line 3 for token .c
+Error occurred on line 9 for token ~
+Error occurred on line 11 for token `
+Error occurred on line 12 for token >

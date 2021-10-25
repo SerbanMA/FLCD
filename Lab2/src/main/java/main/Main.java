@@ -9,11 +9,32 @@ public class Main {
 
     public static void main(String[] args) {
 
-        String filename = "p1.txt";
-        File file = new File(Constant.codes + filename);
+        {
+            String filename = "p1.txt";
+            File file = new File(Constant.codes + filename);
+            MyScanner myScanner = new MyScanner();
+            myScanner.scan(file);
+        }
 
-        MyScanner myScanner = new MyScanner();
+        {
+            String filename = "p1err.txt";
+            File file = new File(Constant.codes + filename);
+            MyScanner myScanner = new MyScanner();
+            myScanner.scan(file);
+        }
 
-        myScanner.scan(file);
+        {
+            String filename = "p2.txt";
+            File file = new File(Constant.codes + filename);
+            MyScanner myScanner = new MyScanner();
+            myScanner.scan(file);
+        }
+
+        {
+            String filename = "p3.txt";
+            File file = new File(Constant.codes + filename);
+            MyScanner myScanner = new MyScanner();
+            myScanner.scan(file);
+        }
     }
 }

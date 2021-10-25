@@ -1,0 +1,12 @@
+Identifiers Table
+- as Binary Search Tree -
+(key: 4, value: i)
+(key: 1, value: n)
+(key: 3, value: s)
+(key: 2, value: x)
+
+
+Constants Table
+- as Binary Search Tree -
+(key: 1, value: 0)
+(key: 3, value: 1)
