@@ -14,11 +14,12 @@ public class MyScanner {
     private SymbolTable identifiersTable;
     private SymbolTable constantsTable;
     private ArrayList<Pair> pifList;
-    private final StringBuilder messageError = new StringBuilder();
 
     private final ParseHelper parseHelper = new ParseHelper();
     private final RegexHelper regexHelper = new RegexHelper();
     private final TypeHelper typeHelper = new TypeHelper();
+
+    private final StringBuilder errorMessage = new StringBuilder();
 
     public MyScanner() {
         set();
@@ -44,7 +45,7 @@ public class MyScanner {
                         Integer index = constantsTable.add(token);
                         pifList.add(new Pair("ct", index));
                     } else {
-                        messageError.append("Error occurred on line ")
+                        errorMessage.append("Error occurred on line ")
                                 .append(line)
                                 .append(" for token ")
                                 .append(token)
@@ -52,8 +53,8 @@ public class MyScanner {
                     }
                 }
             }
-            if (!messageError.isEmpty())
-                throw new Exception(messageError.toString());
+            if (!errorMessage.isEmpty())
+                throw new Exception(errorMessage.toString());
 
             WriterHelper.writeST(file.getName(), identifiersTable, constantsTable);
             WriterHelper.writePIF(file.getName(), pifList);
