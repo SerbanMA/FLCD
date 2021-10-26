@@ -22,7 +22,7 @@ public class RegexHelper {
     }
 
     public boolean isInteger(String value) {
-        return value.matches("^[+-]?[1-9][0-9]*$");
+        return value.matches("^([+-]?[1-9][0-9]*)|0$");
     }
 
     public boolean isCharacter(String value) {
