@@ -17,3 +17,19 @@ I have implemented the symbol table using an alphabetically binary search tree [
     inorder:
         - inorder traversal of a binary search tree.
 
+    * Identifiers *
+    A sequence of letters and digits, such that the first characters are letters and last characters are digits.
+
+	    - identifier = letter | letter{letter}{digit}
+	    letter = "a" | "b" | ... | "z" | "A" | "B" | ... | "Z"
+	    digit = "0" | "1" |...| "9"
+
+    * Constants *
+        1. boolean = "0" | "1"
+
+        2. integer = ["+"|"-"]ndigit{"0"|ndigit}
+            ndigit = "1" |...| "9"
+
+        3. character = letter|digit
+
+        4. string - {character}
