@@ -1,6 +1,6 @@
 package main.java.helper.iostream;
 
-import main.java.SymbolTable;
+import main.java.repository.SymbolTable;
 import main.java.domain.Pair;
 import main.java.helper.constants.Constant;
 

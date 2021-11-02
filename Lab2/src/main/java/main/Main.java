@@ -1,40 +1,80 @@
 package main.java.main;
 
-import main.java.MyScanner;
+import main.java.service.MyFA;
+import main.java.service.MyScanner;
 import main.java.helper.constants.Constant;
 
 import java.io.File;
+import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
 
+        Scanner scanner = new Scanner(System.in);
+
+        // ST - PIF
         {
-            String filename = "p1.txt";
-            File file = new File(Constant.codes + filename);
-            MyScanner myScanner = new MyScanner();
-            myScanner.scan(file);
+            {
+                String filename = "p1.txt";
+                File file = new File(Constant.codes + filename);
+                MyScanner myScanner = new MyScanner();
+                myScanner.scan(file);
+            }
+            {
+                String filename = "p1err.txt";
+                File file = new File(Constant.codes + filename);
+                MyScanner myScanner = new MyScanner();
+                myScanner.scan(file);
+            }
+            {
+                String filename = "p2.txt";
+                File file = new File(Constant.codes + filename);
+                MyScanner myScanner = new MyScanner();
+                myScanner.scan(file);
+            }
+            {
+                String filename = "p3.txt";
+                File file = new File(Constant.codes + filename);
+                MyScanner myScanner = new MyScanner();
+                myScanner.scan(file);
+            }
         }
 
-        {
-            String filename = "p1err.txt";
-            File file = new File(Constant.codes + filename);
-            MyScanner myScanner = new MyScanner();
-            myScanner.scan(file);
-        }
+        MyFA myFA = new MyFA("fa.in");
 
-        {
-            String filename = "p2.txt";
-            File file = new File(Constant.codes + filename);
-            MyScanner myScanner = new MyScanner();
-            myScanner.scan(file);
-        }
+        int option = 1;
 
+        while (option != 0)
         {
-            String filename = "p3.txt";
-            File file = new File(Constant.codes + filename);
-            MyScanner myScanner = new MyScanner();
-            myScanner.scan(file);
+            Main.printMenu();
+            option = scanner.nextInt();
+
+            switch (option) {
+                case 1 -> System.out.println(myFA.getStates());
+                case 2 -> System.out.println(myFA.getAlphabet());
+                case 3 -> System.out.println(myFA.getTransitions());
+                case 4 -> System.out.println(myFA.getInitialState());
+                case 5 -> System.out.println(myFA.getFinalStates());
+                case 6 -> {
+                    System.out.print(">> ");
+                    String value = scanner.next();
+                    System.out.println(myFA.isAccepted(value));
+                }
+                default -> System.out.println("No such option");
+            }
         }
+    }
+
+    public static void printMenu() {
+        System.out.println("Choose:");
+        System.out.println("1. The set of states");
+        System.out.println("2. The alphabet");
+        System.out.println("3. The transitions");
+        System.out.println("4. The initial state");
+        System.out.println("5. The set of final states");
+        System.out.println("6. isAccepted");
+        System.out.println("0. Close");
+        System.out.print(">> ");
     }
 }

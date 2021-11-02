@@ -1,12 +1,19 @@
 package main.java.helper;
 
+import main.java.service.MyFA;
+
 public class RegexHelper {
 
     public RegexHelper() {
     }
 
-    public boolean isIdentifier(String value) {
+    public boolean isIdentifierRegex(String value) {
         return value.matches("^_?[a-zA-Z][a-zA-Z0-9]*$");
+    }
+
+    public boolean isIdentifier(String value) {
+        MyFA myFA = new MyFA("identifier_fa.in");
+        return myFA.isAccepted(value);
     }
 
     public boolean isConstant(String value) {
@@ -21,8 +28,13 @@ public class RegexHelper {
         return value.matches("^[01]$");
     }
 
-    public boolean isInteger(String value) {
+    public boolean isIntegerRegex(String value) {
         return value.matches("^([+-]?[1-9][0-9]*)|0$");
+    }
+
+    public boolean isInteger(String value) {
+        MyFA myFA = new MyFA("integer_fa.in");
+        return myFA.isAccepted(value);
     }
 
     public boolean isCharacter(String value) {

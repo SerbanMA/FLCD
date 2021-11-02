@@ -1,5 +1,6 @@
-package main.java;
+package main.java.service;
 
+import main.java.repository.SymbolTable;
 import main.java.domain.Pair;
 import main.java.helper.*;
 import main.java.helper.constants.Colour;

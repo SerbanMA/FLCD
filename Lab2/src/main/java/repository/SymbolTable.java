@@ -1,4 +1,4 @@
-package main.java;
+package main.java.repository;
 
 import main.java.domain.Node;
 
