@@ -3,7 +3,6 @@ package main.java.service;
 import main.java.repository.SymbolTable;
 import main.java.domain.Pair;
 import main.java.helper.*;
-import main.java.helper.constants.Colour;
 import main.java.helper.iostream.WriterHelper;
 
 import java.io.File;
@@ -61,7 +60,7 @@ public class MyScanner {
             WriterHelper.writePIF(file.getName(), pifList);
 
         } catch (Exception exception) {
-            System.out.println(Colour.RED + exception.getMessage().strip() + Colour.RESET);
+            //System.out.println(Colour.RED + exception.getMessage().strip() + Colour.RESET);
             WriterHelper.writeError(file.getName(), exception.getMessage().strip());
         }
     }

@@ -7,4 +7,6 @@ Identifiers Table
 
 Constants Table
 - as Binary Search Tree -
-This is empty
+(key: 2, value: -123)
+(key: 3, value: 0)
+(key: 1, value: 123)

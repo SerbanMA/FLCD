@@ -74,15 +74,17 @@ public class MyFA {
 
             states = Pattern.compile(",")
                     .splitAsStream(myReader.nextLine())
+                    .map(String::strip)
                     .collect(Collectors.toCollection(HashSet::new));
 
             alphabet = Pattern.compile(",")
                     .splitAsStream(myReader.nextLine())
+                    .map(String::strip)
                     .collect(Collectors.toCollection(HashSet::new));
 
             String[] transition = myReader.nextLine().split("~");
             while (transition.length == 3) {
-                transitions.add(new Triple(transition[0], transition[1], transition[2]));
+                transitions.add(new Triple(transition[0].strip(), transition[1].strip(), transition[2].strip()));
                 transition = myReader.nextLine().split("~");
             }
 
@@ -90,6 +92,7 @@ public class MyFA {
 
             finalStates = Pattern.compile(",")
                     .splitAsStream(myReader.nextLine())
+                    .map(String::strip)
                     .collect(Collectors.toCollection(HashSet::new));
 
         } catch (FileNotFoundException e) {
