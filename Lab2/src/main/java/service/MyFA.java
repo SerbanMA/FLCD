@@ -51,9 +51,9 @@ public class MyFA {
 
             boolean inTransitions = false;
             for (Triple transition : transitions) {
-                if (transition.getOne().equals(currentStare)
-                        && transition.getTwo().equals(character)) {
-                    currentStare = transition.getThree();
+                if (transition.getStart().equals(currentStare)
+                        && transition.getValue().equals(character)) {
+                    currentStare = transition.getFinish();
                     inTransitions = true;
                 }
             }

@@ -42,15 +42,21 @@
         toString:
             - inorder traversal of a binary search tree.
 
-    * Finite Automaton*
+    * Finite Automaton *
         state = letter{letter|digit}
         character = letter | digit | symbol
         transition = state "~" character "~" state
 
         states = state "," states | state
-        alphabet = character "," alphabet | charcater
+        alphabet = character "," alphabet | character
         transitions = transition NEWLINE transitions | transition
         initialState = state
         finalStates = state "," finalStates | state
 
         file = state NEWLINE alphabet NEWLINE transitions NEWLINE initialState NEWLINE finalStates
+
+        isAccepted:
+            - goes character by character;
+            - checks if exists a transition from current state to a new state using the current character
+            - returns true if the last character leads to a final state
+            - otherwise, returns false

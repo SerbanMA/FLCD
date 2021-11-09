@@ -1,35 +1,35 @@
 package main.java.domain;
 
 public class Triple {
-    private final String one;
-    private final String two;
-    private final String three;
+    private final String start;
+    private final String value;
+    private final String finish;
 
-    public Triple(String one, String two, String three) {
-        this.one = one;
-        this.two = two;
-        this.three = three;
+    public Triple(String start, String value, String finish) {
+        this.start = start;
+        this.value = value;
+        this.finish = finish;
 
     }
 
-    public String getOne() {
-        return one;
+    public String getStart() {
+        return start;
     }
 
-    public String getTwo() {
-        return two;
+    public String getValue() {
+        return value;
     }
 
-    public String getThree() {
-        return three;
+    public String getFinish() {
+        return finish;
     }
 
     @Override
     public String toString() {
         return "(" +
-                one + " -<" +
-                two + ">- " +
-                three + ")";
+                start + " -<" +
+                value + ">- " +
+                finish + ")";
 
     }
 }
