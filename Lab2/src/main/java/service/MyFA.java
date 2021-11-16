@@ -1,6 +1,6 @@
 package main.java.service;
 
-import main.java.domain.Triple;
+import main.java.domain.Transition;
 import main.java.helper.constants.Constant;
 
 import java.io.File;
@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 public class MyFA {
     private Set<String> states;
     private Set<String> alphabet;
-    private final Set<Triple> transitions = new HashSet<>();
+    private final Set<Transition> transitions = new HashSet<>();
     private String initialState;
     private Set<String> finalStates;
 
@@ -28,7 +28,7 @@ public class MyFA {
         return alphabet;
     }
 
-    public Set<Triple> getTransitions() {
+    public Set<Transition> getTransitions() {
         return transitions;
     }
 
@@ -50,7 +50,7 @@ public class MyFA {
         for (String character : characters) {
 
             boolean inTransitions = false;
-            for (Triple transition : transitions) {
+            for (Transition transition : transitions) {
                 if (transition.getStart().equals(currentStare)
                         && transition.getValue().equals(character)) {
                     currentStare = transition.getFinish();
@@ -84,7 +84,7 @@ public class MyFA {
 
             String[] transition = myReader.nextLine().split("~");
             while (transition.length == 3) {
-                transitions.add(new Triple(transition[0].strip(), transition[1].strip(), transition[2].strip()));
+                transitions.add(new Transition(transition[0].strip(), transition[1].strip(), transition[2].strip()));
                 transition = myReader.nextLine().split("~");
             }
 

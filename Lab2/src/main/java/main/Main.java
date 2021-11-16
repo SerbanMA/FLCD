@@ -1,6 +1,7 @@
 package main.java.main;
 
 import main.java.service.MyFA;
+import main.java.service.MyGrammar;
 import main.java.service.MyScanner;
 import main.java.helper.constants.Constant;
 
@@ -42,6 +43,7 @@ public class Main {
         }
 
         MyFA myFA = new MyFA("fa.in");
+        MyGrammar myGrammar = new MyGrammar("grammar.in");
 
         int option = 1;
 
@@ -61,6 +63,13 @@ public class Main {
                     String value = scanner.next();
                     System.out.println(myFA.isAccepted(value));
                 }
+                case 7 -> System.out.println(myGrammar);
+                case 8 -> {
+                    System.out.print(">> ");
+                    String value = scanner.next();
+                    System.out.println(myGrammar.getProductionsByKey(value));
+                }
+                case 9 -> System.out.println(myGrammar.isContextFree());
                 default -> System.out.println("No such option");
             }
         }
@@ -74,6 +83,9 @@ public class Main {
         System.out.println("4. The initial state");
         System.out.println("5. The set of final states");
         System.out.println("6. isAccepted");
+        System.out.println("7. The grammar");
+        System.out.println("8. The Productions of a nonTerminal");
+        System.out.println("9. isContextFree");
         System.out.println("0. Close");
         System.out.print(">> ");
     }

@@ -1,11 +1,11 @@
 package main.java.domain;
 
-public class Triple {
+public class Transition {
     private final String start;
     private final String value;
     private final String finish;
 
-    public Triple(String start, String value, String finish) {
+    public Transition(String start, String value, String finish) {
         this.start = start;
         this.value = value;
         this.finish = finish;
