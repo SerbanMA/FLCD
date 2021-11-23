@@ -43,7 +43,7 @@ public class Main {
         }
 
         MyFA myFA = new MyFA("fa.in");
-        MyGrammar myGrammar = new MyGrammar("grammar.in");
+        MyGrammar myGrammar = new MyGrammar("g2.in");
 
         int option = 1;
 

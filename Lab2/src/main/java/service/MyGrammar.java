@@ -5,11 +5,9 @@ import main.java.helper.constants.Constant;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.HashSet;
-import java.util.Objects;
-import java.util.Scanner;
-import java.util.Set;
+import java.util.*;
 import java.util.regex.Pattern;
+import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 public class MyGrammar {
@@ -38,11 +36,11 @@ public class MyGrammar {
         return startSymbol;
     }
 
-    public Set<String> getProductionsByKey(String key) {
+    public List<String> getProductionsByKey(String key) {
         return rules.stream()
                 .filter(rule -> Objects.equals(rule.getKey(), key))
                 .map(Rule::getValue)
-                .collect(Collectors.toCollection(HashSet::new));
+                .collect(Collectors.toCollection(ArrayList::new));
     }
 
     private void readData(String fileName) {

@@ -1,0 +1,20 @@
+relation, operation, simpleType, arrayType, type, declarationList, declaration, identifier, attribution, expression, ifStatement, whileStatement, ioStatement, statementList, statement, program, term, condition
+<-, <<, >>, <=, >=, ==, ~~, and, or, add, sub, div, mul, array, [, ], var, if, else, while, read, write, boolean, character, integer, string
+relation -> <<|>>|<=|>=|==|~~|and|or
+operation -> add|sub|div|mul
+simpleType -> boolean|character|integer|string
+arrayType -> simpleType@array [number]
+type -> simpleType|arrayType
+declarationList -> declaration | declaration@declarationList
+declaration -> var@type@identifier
+attribution -> identifier<-expression
+expression -> expression@operation@term | term
+term -> expression | identifier
+condition -> expression@relation@expression
+ifStatement -> if[condition]statement@else@statement
+whileStatement -> while[condition]statement
+ioStatement -> read[identifier] | write[identifier]
+statementList -> statement | statement@statementList
+statement -> ifStatement|whileStatement|ioStatement|attribution
+program -> declarationList statementList
+program
