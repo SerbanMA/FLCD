@@ -1,5 +1,6 @@
 package main.java.service;
 
+import main.java.domain.Production;
 import main.java.domain.Rule;
 import main.java.helper.constants.Constant;
 
@@ -7,13 +8,12 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
 import java.util.regex.Pattern;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 public class MyGrammar {
     private Set<String> nonTerminalSymbols;
     private Set<String> terminalSymbols;
-    private final Set<Rule> rules = new HashSet<>();
+    private final Set<Production> rules = new HashSet<>();
     private String startSymbol;
 
     public MyGrammar(String fileName) {
@@ -28,7 +28,7 @@ public class MyGrammar {
         return terminalSymbols;
     }
 
-    public Set<Rule> getRules() {
+    public Set<Production> getRules() {
         return rules;
     }
 
@@ -36,10 +36,10 @@ public class MyGrammar {
         return startSymbol;
     }
 
-    public List<String> getProductionsByKey(String key) {
+    public List<List<String>> getProductionsByKey(String key) {
         return rules.stream()
-                .filter(rule -> Objects.equals(rule.getKey(), key))
-                .map(Rule::getValue)
+                .filter(production -> Objects.equals(production.getKey(), key))
+                .map(Production::getValue)
                 .collect(Collectors.toCollection(ArrayList::new));
     }
 
@@ -63,7 +63,10 @@ public class MyGrammar {
             while (rule.length == 2) {
                 String[] productions = rule[1].split("\\|");
                 for (String production : productions) {
-                    rules.add(new Rule(rule[0].strip(), production.strip()));
+
+                    String[] productionList = production.strip().split(" ");
+
+                    rules.add(new Production(rule[0].strip(), Arrays.asList(productionList)));
                 }
 
                 rule = myReader.nextLine().split("->");

@@ -3,18 +3,18 @@ relation, operation, simpleType, arrayType, type, declarationList, declaration, 
 relation -> <<|>>|<=|>=|==|~~|and|or
 operation -> add|sub|div|mul
 simpleType -> boolean|character|integer|string
-arrayType -> simpleType@array [number]
+arrayType -> simpleType array [number]
 type -> simpleType|arrayType
 declarationList -> declaration | declaration@declarationList
-declaration -> var@type@identifier
+declaration -> var type identifier
 attribution -> identifier<-expression
-expression -> expression@operation@term | term
+expression -> expression operation term | term
 term -> expression | identifier
-condition -> expression@relation@expression
-ifStatement -> if[condition]statement@else@statement
+condition -> expression relation expression
+ifStatement -> if[condition]statement else statement
 whileStatement -> while[condition]statement
 ioStatement -> read[identifier] | write[identifier]
-statementList -> statement | statement@statementList
+statementList -> statement | statement statementList
 statement -> ifStatement|whileStatement|ioStatement|attribution
 program -> declarationList statementList
 program

@@ -5,7 +5,7 @@ import java.util.Stack;
 public class Configuration {
     private String state;
     private Integer index;
-    private final Stack<Rule> workStack;
+    private final Stack<Production> workStack;
     private final Stack<String> inputStack;
 
     public String getState() {
@@ -27,7 +27,7 @@ public class Configuration {
         return index;
     }
 
-    public Stack<Rule> getWorkStack() {
+    public Stack<Production> getWorkStack() {
         return workStack;
     }
 

@@ -1,5 +1,4 @@
 S
 a, b, c
-S -> abSb | aS | c
-S -> a
+S -> a b S b | a S | c
 S
