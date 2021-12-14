@@ -4,226 +4,6 @@ WORK: []
 STATE: q
 INDEX: 0
 ################
-INPUT: [a, b, S, b]
-WORK: [(key: S, value: [a, b, S, b])]
-STATE: q
-INDEX: 0
-################
-INPUT: [b, S, b]
-WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a])]
-STATE: q
-INDEX: 1
-################
-INPUT: [S, b]
-WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b])]
-STATE: q
-INDEX: 2
-################
-INPUT: [a, b, S, b, b]
-WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b])]
-STATE: q
-INDEX: 2
-################
-INPUT: [b, S, b, b]
-WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a])]
-STATE: q
-INDEX: 3
-################
-INPUT: [S, b, b]
-WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b])]
-STATE: q
-INDEX: 4
-################
-INPUT: [a, b, S, b, b, b]
-WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b])]
-STATE: q
-INDEX: 4
-################
-INPUT: [b, S, b, b, b]
-WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a])]
-STATE: q
-INDEX: 5
-################
-INPUT: [b, S, b, b, b]
-WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a])]
-STATE: b
-INDEX: 5
-################
-INPUT: [a, b, S, b, b, b]
-WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b])]
-STATE: b
-INDEX: 4
-################
-INPUT: [c, b, b]
-WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [c])]
-STATE: q
-INDEX: 4
-################
-INPUT: [c, b, b]
-WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [c])]
-STATE: b
-INDEX: 4
-################
-INPUT: [a, S, b, b]
-WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S])]
-STATE: q
-INDEX: 4
-################
-INPUT: [S, b, b]
-WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a])]
-STATE: q
-INDEX: 5
-################
-INPUT: [a, b, S, b, b, b]
-WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [a, b, S, b])]
-STATE: q
-INDEX: 5
-################
-INPUT: [a, b, S, b, b, b]
-WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [a, b, S, b])]
-STATE: b
-INDEX: 5
-################
-INPUT: [c, b, b]
-WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c])]
-STATE: q
-INDEX: 5
-################
-INPUT: [b, b]
-WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c])]
-STATE: q
-INDEX: 6
-################
-INPUT: [b]
-WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b])]
-STATE: q
-INDEX: 7
-################
-INPUT: [b]
-WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b])]
-STATE: b
-INDEX: 7
-################
-INPUT: [b, b]
-WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c])]
-STATE: b
-INDEX: 6
-################
-INPUT: [c, b, b]
-WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c])]
-STATE: b
-INDEX: 5
-################
-INPUT: [a, S, b, b]
-WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [a, S])]
-STATE: q
-INDEX: 5
-################
-INPUT: [a, S, b, b]
-WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [a, S])]
-STATE: b
-INDEX: 5
-################
-INPUT: [S, b, b]
-WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a])]
-STATE: b
-INDEX: 5
-################
-INPUT: [a, S, b, b]
-WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S])]
-STATE: b
-INDEX: 4
-################
-INPUT: [S, b, b]
-WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b])]
-STATE: b
-INDEX: 4
-################
-INPUT: [b, S, b, b]
-WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a])]
-STATE: b
-INDEX: 3
-################
-INPUT: [a, b, S, b, b]
-WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b])]
-STATE: b
-INDEX: 2
-################
-INPUT: [c, b]
-WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [c])]
-STATE: q
-INDEX: 2
-################
-INPUT: [c, b]
-WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [c])]
-STATE: b
-INDEX: 2
-################
-INPUT: [a, S, b]
-WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S])]
-STATE: q
-INDEX: 2
-################
-INPUT: [S, b]
-WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a])]
-STATE: q
-INDEX: 3
-################
-INPUT: [a, b, S, b, b]
-WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [a, b, S, b])]
-STATE: q
-INDEX: 3
-################
-INPUT: [a, b, S, b, b]
-WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [a, b, S, b])]
-STATE: b
-INDEX: 3
-################
-INPUT: [c, b]
-WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c])]
-STATE: q
-INDEX: 3
-################
-INPUT: [c, b]
-WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c])]
-STATE: b
-INDEX: 3
-################
-INPUT: [a, S, b]
-WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [a, S])]
-STATE: q
-INDEX: 3
-################
-INPUT: [a, S, b]
-WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [a, S])]
-STATE: b
-INDEX: 3
-################
-INPUT: [S, b]
-WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a])]
-STATE: b
-INDEX: 3
-################
-INPUT: [a, S, b]
-WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S])]
-STATE: b
-INDEX: 2
-################
-INPUT: [S, b]
-WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b])]
-STATE: b
-INDEX: 2
-################
-INPUT: [b, S, b]
-WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a])]
-STATE: b
-INDEX: 1
-################
-INPUT: [a, b, S, b]
-WORK: [(key: S, value: [a, b, S, b])]
-STATE: b
-INDEX: 0
-################
 INPUT: [c]
 WORK: [(key: S, value: [c])]
 STATE: q
@@ -242,16 +22,6 @@ INDEX: 0
 INPUT: [S]
 WORK: [(key: S, value: [a, S]), (key: a, value: [a])]
 STATE: q
-INDEX: 1
-################
-INPUT: [a, b, S, b]
-WORK: [(key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [a, b, S, b])]
-STATE: q
-INDEX: 1
-################
-INPUT: [a, b, S, b]
-WORK: [(key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [a, b, S, b])]
-STATE: b
 INDEX: 1
 ################
 INPUT: [c]
@@ -274,6 +44,16 @@ WORK: [(key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [a, S])]
 STATE: b
 INDEX: 1
 ################
+INPUT: [a, b, S, b]
+WORK: [(key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [a, b, S, b])]
+STATE: q
+INDEX: 1
+################
+INPUT: [a, b, S, b]
+WORK: [(key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [a, b, S, b])]
+STATE: b
+INDEX: 1
+################
 INPUT: [S]
 WORK: [(key: S, value: [a, S]), (key: a, value: [a])]
 STATE: b
@@ -283,3 +63,886 @@ INPUT: [a, S]
 WORK: [(key: S, value: [a, S])]
 STATE: b
 INDEX: 0
+################
+INPUT: [a, b, S, b]
+WORK: [(key: S, value: [a, b, S, b])]
+STATE: q
+INDEX: 0
+################
+INPUT: [b, S, b]
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a])]
+STATE: q
+INDEX: 1
+################
+INPUT: [S, b]
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b])]
+STATE: q
+INDEX: 2
+################
+INPUT: [c, b]
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [c])]
+STATE: q
+INDEX: 2
+################
+INPUT: [c, b]
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [c])]
+STATE: b
+INDEX: 2
+################
+INPUT: [a, S, b]
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S])]
+STATE: q
+INDEX: 2
+################
+INPUT: [S, b]
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a])]
+STATE: q
+INDEX: 3
+################
+INPUT: [c, b]
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c])]
+STATE: q
+INDEX: 3
+################
+INPUT: [c, b]
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c])]
+STATE: b
+INDEX: 3
+################
+INPUT: [a, S, b]
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [a, S])]
+STATE: q
+INDEX: 3
+################
+INPUT: [a, S, b]
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [a, S])]
+STATE: b
+INDEX: 3
+################
+INPUT: [a, b, S, b, b]
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [a, b, S, b])]
+STATE: q
+INDEX: 3
+################
+INPUT: [a, b, S, b, b]
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [a, b, S, b])]
+STATE: b
+INDEX: 3
+################
+INPUT: [S, b]
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a])]
+STATE: b
+INDEX: 3
+################
+INPUT: [a, S, b]
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S])]
+STATE: b
+INDEX: 2
+################
+INPUT: [a, b, S, b, b]
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b])]
+STATE: q
+INDEX: 2
+################
+INPUT: [b, S, b, b]
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a])]
+STATE: q
+INDEX: 3
+################
+INPUT: [S, b, b]
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b])]
+STATE: q
+INDEX: 4
+################
+INPUT: [c, b, b]
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [c])]
+STATE: q
+INDEX: 4
+################
+INPUT: [c, b, b]
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [c])]
+STATE: b
+INDEX: 4
+################
+INPUT: [a, S, b, b]
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S])]
+STATE: q
+INDEX: 4
+################
+INPUT: [S, b, b]
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a])]
+STATE: q
+INDEX: 5
+################
+INPUT: [c, b, b]
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c])]
+STATE: q
+INDEX: 5
+################
+INPUT: [b, b]
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c])]
+STATE: q
+INDEX: 6
+################
+INPUT: [b]
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b])]
+STATE: q
+INDEX: 7
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, S]), (key: a, value: [a]), (key: S, value: [c]), (key: c, value: [c]), (key: b, value: [b]), (key: b, value: [b])]
+STATE: q
+INDEX: 8
+################
+INPUT: []
+WORK: [(key: S, value: [a, b, S, b]), (key: a, value: [a]), (key: b, value: [b]), (key: S, value: [a, b

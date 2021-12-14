@@ -1,5 +1,6 @@
 package main.java.main;
 
+import main.java.helper.iostream.ReaderHelper;
 import main.java.service.MyFA;
 import main.java.service.MyGrammar;
 import main.java.service.MyParser;
@@ -79,8 +80,9 @@ public class Main {
         System.out.println(grammar);
         MyParser parser = new MyParser();
 
-        parser.recursiveDescendant(grammar, "ababacbb"
-        );
+        String sequence = ReaderHelper.getSequence("seq.txt");
+
+        parser.recursiveDescendant(grammar, sequence);
     }
 
 //    public static void printMenu() {

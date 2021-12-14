@@ -5,6 +5,7 @@ import main.java.helper.constants.Constant;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class ReaderHelper {
@@ -28,7 +29,7 @@ public class ReaderHelper {
         return separators;
     }
 
-    public static ArrayList<String> readOperators() {
+    public static List<String> readOperators() {
         ArrayList<String> operators = new ArrayList<>();
 
         try {
@@ -47,7 +48,7 @@ public class ReaderHelper {
         return operators;
     }
 
-    public static ArrayList<String> readReservedWords() {
+    public static List<String> readReservedWords() {
         ArrayList<String> reservedWords = new ArrayList<>();
 
         try {
@@ -64,5 +65,18 @@ public class ReaderHelper {
         }
 
         return reservedWords;
+    }
+
+    public static String getSequence(String fileName) {
+        try {
+            File file = new File(Constant.sequence + fileName);
+            Scanner myReader = new Scanner(file);
+
+            return myReader.nextLine();
+
+        } catch (FileNotFoundException exception) {
+            System.out.println(exception.getMessage());
+        }
+        return "";
     }
 }

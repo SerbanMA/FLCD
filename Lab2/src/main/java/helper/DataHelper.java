@@ -7,9 +7,9 @@ import java.util.List;
 
 public abstract class DataHelper {
 
-    private final ArrayList<String> separators;
-    private final ArrayList<String> operators;
-    private final ArrayList<String> reservedWords;
+    private final List<String> separators;
+    private final List<String> operators;
+    private final List<String> reservedWords;
 
     public DataHelper() {
         separators = ReaderHelper.readSeparators();
@@ -17,11 +17,11 @@ public abstract class DataHelper {
         reservedWords = ReaderHelper.readReservedWords();
     }
 
-    protected ArrayList<String> getSeparators() {
+    protected List<String> getSeparators() {
         return separators;
     }
 
-    protected ArrayList<String> getSeparatorsWithSpecial() {
+    protected List<String> getSeparatorsWithSpecial() {
         ArrayList<String> separatorsWithSpecial = new ArrayList<>();
 
         for (String separator : separators) {
@@ -35,11 +35,11 @@ public abstract class DataHelper {
         return separatorsWithSpecial;
     }
 
-    protected ArrayList<String> getOperators() {
+    protected List<String> getOperators() {
         return operators;
     }
 
-    protected ArrayList<String> getReservedWords() {
+    protected List<String> getReservedWords() {
         return reservedWords;
     }
 

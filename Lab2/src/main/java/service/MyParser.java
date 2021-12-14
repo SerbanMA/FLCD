@@ -37,7 +37,7 @@ public class MyParser {
 
                 if (Objects.equals(configuration.getState(), NORMAL)) {
 
-                    if (configuration.getIndex() == input.length() && configuration.getInputStack().isEmpty()) {
+                    if (configuration.getIndex() == input.split(" ").length && configuration.getInputStack().isEmpty()) {
                         SUCCESS(configuration);
                     } else {
                         // IMPORTANT
@@ -50,7 +50,7 @@ public class MyParser {
                             EXPAND(configuration, grammar);
 
                         } else {
-                            if (configuration.getIndex() < input.length() && Objects.equals(head, input.split("")[configuration.getIndex()])) {
+                            if (configuration.getIndex() < input.length() && Objects.equals(head, input.split(" ")[configuration.getIndex()])) {
                                 ADVANCE(configuration);
 
                             } else {
@@ -76,10 +76,19 @@ public class MyParser {
                 System.out.println("Error");
             else {
                 System.out.println("Sequence accepted");
-                System.out.println(configuration.getWorkStack()
+
+                String result = grammar.getStartSymbol();
+                System.out.println(result);
+
+                List<Production> finalProductions = configuration.getWorkStack()
                         .stream()
                         .filter(production -> grammar.getRules().contains(production))
-                        .collect(Collectors.toList()));
+                        .collect(Collectors.toList());
+
+                for (var production : finalProductions) {
+                    result = result.replaceFirst(production.getKey(), String.join("", production.getValue()));
+                    System.out.println(result);
+                }
             }
 
             writer.close();
