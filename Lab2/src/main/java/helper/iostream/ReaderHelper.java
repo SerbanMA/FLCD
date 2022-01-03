@@ -79,4 +79,27 @@ public class ReaderHelper {
         }
         return "";
     }
+
+    public static String getSequenceFromPIF(String fileName) {
+        try {
+            File file = new File(Constant.output + fileName);
+            Scanner myReader = new Scanner(file);
+
+            myReader.nextLine();
+            myReader.nextLine();
+
+            StringBuilder solution = new StringBuilder();
+
+            while (myReader.hasNextLine()) {
+                String key = myReader.nextLine();
+                solution.append(key.substring(key.indexOf(":") + 1, key.indexOf(",")));
+            }
+
+            return solution.toString().strip();
+
+        } catch (FileNotFoundException exception) {
+            System.out.println(exception.getMessage());
+        }
+        return "";
+    }
 }

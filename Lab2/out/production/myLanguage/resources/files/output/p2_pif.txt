@@ -26,7 +26,7 @@ PIF List
 (key: id, value: 3)
 (key: <-, value: 0)
 (key: id, value: 1)
-(key: id, value: 9)
+(key: mod, value: 0)
 (key: id, value: 2)
 (key: id, value: 1)
 (key: <-, value: 0)
