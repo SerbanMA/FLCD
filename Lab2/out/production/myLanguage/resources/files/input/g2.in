@@ -1,20 +1,20 @@
-relation, operation, simpleType, arrayType, type, declarationList, declaration, IDENTIFIER, attribution, expression, ifStatement, whileStatement, ioStatement, statementList, statement, program, term, condition
-<-, <<, >>, <=, >=, ==, ~~, and, or, add, sub, div, mul, array, [, ], var, if, else, while, read, write, boolean, character, integer, string
-relation -> <<|>>|<=|>=|==|~~|and|or
-operation -> add|sub|div|mul
-simpleType -> boolean|character|integer|string
-arrayType -> simpleType array [number]
+relation, operation, simpleType, arrayType, type, declarationList, declaration, attribution, expression, ifStatement, whileStatement, ioStatement, statementList, statement, program, term, condition
+<-, <<, >>, <=, >=, ==, ~~, and, or, add, sub, div, mul, mod, array, [, ], var, if, else, while, read, write, boolean, character, integer, string, id, ct
+relation -> << | >> | <= | >= | == | ~~ | and | or
+operation -> add | sub | div | mul | mod
+simpleType -> boolean | character | integer | string
+arrayType -> simpleType array [ number ]
 type -> simpleType|arrayType
-declarationList -> declaration | declaration@declarationList
-declaration -> var type IDENTIFIER
-attribution -> identifier<-expression
-expression -> expression operation term | term
-term -> expression | IDENTIFIER
+declarationList -> declaration | declaration declarationList
+declaration -> var type id
+attribution -> id <- expression
+expression -> term operation expression | term
+term -> id | ct
 condition -> expression relation expression
-ifStatement -> if[condition]statement else statement
-whileStatement -> while[condition]statement
-ioStatement -> read[identifier] | write[identifier]
+ifStatement -> if [ condition ] statementList else statementList
+whileStatement -> while [ condition ] statementList
+ioStatement -> read [ id ] | write [ id ]
 statementList -> statement | statement statementList
-statement -> ifStatement|whileStatement|ioStatement|attribution
+statement -> ifStatement | whileStatement | ioStatement | attribution
 program -> declarationList statementList
 program

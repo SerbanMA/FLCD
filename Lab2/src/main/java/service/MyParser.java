@@ -21,7 +21,6 @@ public class MyParser {
     public void recursiveDescendant(MyGrammar grammar, String input) {
 
         try {
-
             FileWriter fileWriter = new FileWriter(Constant.output + "debug");
             BufferedWriter writer = new BufferedWriter(fileWriter);
 
@@ -42,19 +41,20 @@ public class MyParser {
                     } else {
                         // IMPORTANT
                         if (configuration.getInputStack().isEmpty()) {
-                            BACK(configuration);
+                            MOMENTARY_INSUCCESS(configuration);
                         }
-
-                        String head = configuration.getInputStack().get(0);
-                        if (grammar.getNonTerminalSymbols().contains(head)) {
-                            EXPAND(configuration, grammar);
-
-                        } else {
-                            if (configuration.getIndex() < input.length() && Objects.equals(head, input.split(" ")[configuration.getIndex()])) {
-                                ADVANCE(configuration);
+                        else {
+                            String head = configuration.getInputStack().get(0);
+                            if (grammar.getNonTerminalSymbols().contains(head)) {
+                                EXPAND(configuration, grammar);
 
                             } else {
-                                MOMENTARY_INSUCCESS(configuration);
+                                if (configuration.getIndex() < input.length() && Objects.equals(head, input.split(" ")[configuration.getIndex()])) {
+                                    ADVANCE(configuration);
+
+                                } else {
+                                    MOMENTARY_INSUCCESS(configuration);
+                                }
                             }
                         }
                     }
@@ -86,7 +86,7 @@ public class MyParser {
                         .collect(Collectors.toList());
 
                 for (var production : finalProductions) {
-                    result = result.replaceFirst(production.getKey(), String.join("", production.getValue()));
+                    result = result.replaceFirst(production.getKey(), String.join(" ", production.getValue()));
                     System.out.println(result);
                 }
             }
