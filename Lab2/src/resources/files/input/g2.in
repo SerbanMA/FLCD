@@ -1,5 +1,5 @@
 relation, operation, simpleType, arrayType, type, declarationList, declaration, attribution, expression, ifStatement, whileStatement, ioStatement, statementList, statement, program, term, condition
-<-, <<, >>, <=, >=, ==, ~~, and, or, add, sub, div, mul, mod, array, [, ], var, if, else, while, read, write, boolean, character, integer, string, id, ct
+<-, <<, >>, <=, >=, ==, ~~, and, or, add, sub, div, mul, mod, array, var, if, else, while, read, write, boolean, character, integer, string, id, ct, [, ]
 relation -> << | >> | <= | >= | == | ~~ | and | or
 operation -> add | sub | div | mul | mod
 simpleType -> boolean | character | integer | string

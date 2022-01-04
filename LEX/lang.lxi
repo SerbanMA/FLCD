@@ -1,0 +1,67 @@
+
+%option noyywrap
+%option caseless
+
+SEPARATOR		[;,(){}\[\]\t ]
+LETTER			[A-Za-z]	
+DIGIT			[0-9]
+DIGIT_NONZERO   [1-9]       
+IDENTIFIER		({LETTER}|"_")+({LETTER}|{DIGIT}|"_")*[']?
+BOOLEAN 		[01]
+INTEGER 		{DIGIT_NONZERO}+[{DIGIT}]*|[0]
+CHAR 			[\'][^\n][\']
+STRING   		[\"][^\n]*[\"]
+
+%% 
+
+"<-"
+"<<"
+">>"
+"<="
+">="
+"=="
+"~~"
+and
+or
+add
+sub
+div
+mul
+mod
+array
+var
+if
+else
+while
+read
+write
+boolean
+character
+integer
+string
+id
+ct
+
+{IDENTIFIER}
+{BOOLEAN}
+{INTEGER}
+{CHAR}
+{STRING}
+{SEPARATOR}
+	
+[0-9]+{IDENTIFIER}	{printf("Error: invalid identifier %s", yytext);}
+[=]+[<>]+			{printf("Error: invalid combination of operators %s", yytext);}					
+.					{printf("Error: invalid text %s", yytext);}
+
+%%
+
+extern FILE *yyin;
+
+int main(int argc, char **argv)
+{
+	++argv, --argc;
+	if (argc>0)
+   		yyin=fopen(argv[0],"r");
+   	yylex();
+	return 0;
+}

@@ -41,7 +41,6 @@ PIF List
 (key: <-, value: 0)
 (key: id, value: 4)
 (key: add, value: 0)
-(key: id, value: 16)
 (key: ct, value: 3)
 (key: write, value: 0)
 (key: [, value: 0)

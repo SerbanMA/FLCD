@@ -6,7 +6,7 @@ read[a]
 read[b]
 read[c]
 
-if[a add a >> b]
+if[a >> b]
 	write[a]
 else
 	if[c >> b]

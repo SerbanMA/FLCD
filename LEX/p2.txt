@@ -1,0 +1,13 @@
+var integer a
+var integer b
+var integer r
+
+read[a]
+read[b]
+
+while[b ~~ 0]
+	r <- a mod b
+	a <- b
+	b <- r
+
+write[a]

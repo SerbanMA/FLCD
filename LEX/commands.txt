@@ -1,0 +1,3 @@
+flex lang.lxi
+g++ lex.yy.c -o lexicalAnalizer
+lexicalAnalizer.exe < p1.txt
