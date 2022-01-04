@@ -75,10 +75,10 @@ public class Main {
             }
         }
 
-        MyGrammar grammar = new MyGrammar("g1.in");
+        MyGrammar grammar = new MyGrammar("g2.in");
         MyParser parser = new MyParser();
 
-        String sequence = ReaderHelper.getSequence("seq.txt");
+        String sequence = ReaderHelper.getSequenceFromPIF("p1_pif.txt");
 
         System.out.println(sequence);
 

@@ -1,3 +1,8 @@
+%{
+#include "Utils.h"
+#include <math.h>
+void printError(string text, int line, string message);
+%}
 
 %option noyywrap
 %option caseless
@@ -14,44 +19,41 @@ STRING   		[\"][^\n]*[\"]
 
 %% 
 
-"<-"
-"<<"
-">>"
-"<="
-">="
-"=="
-"~~"
-and
-or
-add
-sub
-div
-mul
-mod
-array
-var
-if
-else
-while
-read
-write
-boolean
-character
-integer
-string
-id
-ct
+"<-"		{addPIF(2,-1,pif); printf("<- %d\n", 2);}
+"<<"		{addPIF(3,-1,pif); printf("<< %d\n", 3);}
+">>"		{addPIF(4,-1,pif); printf(">> %d\n", 4);}
+"<="		{addPIF(5,-1,pif); printf("<= %d\n", 5);}
+">="		{addPIF(6,-1,pif); printf(">= %d\n", 6);}
+"=="		{addPIF(7,-1,pif); printf("== %d\n", 7);}
+"~~"		{addPIF(8,-1,pif); printf("~~ %d\n", 8);}
+and			{addPIF(9,-1,pif); printf("and %d\n", 9);}
+or			{addPIF(10,-1,pif); printf("or %d\n", 10);}
+add			{addPIF(11,-1,pif); printf("add %d\n", 11);}
+sub			{addPIF(12,-1,pif); printf("sub %d\n", 12);}
+div			{addPIF(13,-1,pif); printf("div %d\n", 13);}
+mul			{addPIF(14,-1,pif); printf("mul %d\n", 14);}
+mod			{addPIF(15,-1,pif); printf("mod %d\n", 15);}
+array		{addPIF(16,-1,pif); printf("array %d\n", 16);}
+var			{addPIF(17,-1,pif); printf("var %d\n", 17);}
+if			{addPIF(18,-1,pif); printf("if %d\n", 18);}
+else		{addPIF(19,-1,pif); printf("else %d\n", 19);}
+while		{addPIF(20,-1,pif); printf("while %d\n", 20);}
+read		{addPIF(21,-1,pif); printf("read %d\n", 21);}
+write		{addPIF(22,-1,pif); printf("write %d\n", 22);}
+boolean		{addPIF(23,-1,pif); printf("boolean %d\n", 23);}
+character	{addPIF(24,-1,pif); printf("character %d\n", 24);}
+integer		{addPIF(25,-1,pif); printf("integer %d\n", 25);}
+string		{addPIF(26,-1,pif); printf("string %d\n", 26);}
+id			{addPIF(27,-1,pif); printf("id %d\n", 27);}
+ct			{addPIF(28,-1,pif); printf("ct %d\n", 28);}
+\n			{yylineno++;}
 
-{IDENTIFIER}
-{BOOLEAN}
-{INTEGER}
-{CHAR}
-{STRING}
-{SEPARATOR}
-	
-[0-9]+{IDENTIFIER}	{printf("Error: invalid identifier %s", yytext);}
-[=]+[<>]+			{printf("Error: invalid combination of operators %s", yytext);}					
-.					{printf("Error: invalid text %s", yytext);}
+{IDENTIFIER}	{addPIF(0,addST(yytext,st,pif),pif); printf("IDENTIFIER %d\n", 0);}
+{BOOLEAN}		{addPIF(1,addST(yytext,st,pif),pif); printf("BOOLEAN %d\n", 1);}
+{INTEGER}		{addPIF(1,addST(yytext,st,pif),pif); printf("INTEGER %d\n", 1);}
+{CHAR}			{addPIF(1,addST(yytext,st,pif),pif); printf("CHAR %d\n", 1);}
+{STRING}		{addPIF(1,addST(yytext,st,pif),pif); printf("STRING %d\n", 1);}
+{SEPARATOR}		
 
 %%
 
@@ -63,5 +65,8 @@ int main(int argc, char **argv)
 	if (argc>0)
    		yyin=fopen(argv[0],"r");
    	yylex();
+    printPIF(pif);
+	printST(st);
+	printError(error);
 	return 0;
 }
